@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowUp, Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
@@ -9,11 +8,14 @@ import { Navbar } from "@/components/navbar";
 import { LoadingScreen } from "@/components/loading-screen";
 import { portfolioData as data } from "@/lib/resume-data";
 
+const imageCandidates = ["/profile.jpg", "/profile.jpeg", "/profile.png", "/profile.webp"];
+
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const [loaded, setLoaded] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 800);
@@ -58,8 +60,14 @@ export default function Home() {
             <a href={whatsappLink} target="_blank" rel="noreferrer"><MessageCircle /></a>
           </div>
         </motion.div>
+
         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} className="glass relative mx-auto h-80 w-80 overflow-hidden rounded-3xl shadow-glow">
-          <Image src="/profile.jpg" alt="Chirag Agarwal" fill className="object-cover object-top" />
+          <img
+            src={imageCandidates[imageIndex] ?? "/profile-avatar.svg"}
+            alt="Chirag Agarwal"
+            className="h-full w-full object-cover object-top"
+            onError={() => setImageIndex((prev) => prev + 1)}
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
         </motion.div>
       </section>

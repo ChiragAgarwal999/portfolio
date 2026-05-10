@@ -42,3 +42,8 @@ Then restart `npm run dev`.
 ## Profile Photo
 - Save your uploaded photo as `public/profile.jpg`.
 - The hero now renders it with professional crop, top focus, and gradient overlay.
+
+## If profile image still does not appear
+- Supported file names: `profile.jpg`, `profile.jpeg`, `profile.png`, `profile.webp` in `/public`.
+- Restart dev server after adding the file.
+- Hard refresh browser (`Ctrl+F5`).
