@@ -7,6 +7,7 @@ export const portfolioData = {
     "Aspiring Data Scientist skilled in Python, AI, RAG-based chatbot development, and the MERN stack, building data-driven and full-stack applications.",
   email: "agarwalchirag999@gmail.com",
   phone: "+91 8209540517",
+  whatsapp: "https://wa.me/918209540517",
   location: "Jaipur, Rajasthan, India",
   github: "https://github.com/ChiragAgarwal999",
   linkedin: "https://linkedin.com/in/chirag-agarwal-2oo3",
@@ -48,6 +49,14 @@ export const portfolioData = {
     }
   ],
   projects: [
+    {
+      name: "Developer Portfolio Website",
+      description: "A modern personal portfolio with animation-first UI, responsive layouts, and SEO-focused architecture.",
+      features: ["Reusable component system", "Responsive dark UI", "Interactive section transitions"],
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      live: "https://github.com/ChiragAgarwal999",
+      github: "https://github.com/ChiragAgarwal999"
+    },
     {
       name: "PharmaWell (E-Pharmacy Website)",
       description:

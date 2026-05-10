@@ -1,0 +1,2 @@
+Place your professional photo at: public/profile.jpg
+Suggested: 1000x1000 square crop for best hero rendering.
